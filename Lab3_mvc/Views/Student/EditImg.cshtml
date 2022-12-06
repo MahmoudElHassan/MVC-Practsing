@@ -1,0 +1,27 @@
+﻿@model Student
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+    <form class="col w-auto" asp-action="editimg" asp-controller="student" enctype="multipart/form-data">
+        <div class="col-auto">
+            <input class="form-label" type="file" name="stdImg"/>
+        </div>
+        <div class="col-auto">
+            <input type="submit" value="Add" class="btn btn-info">
+        </div>
+    </form>
+    <a asp-action="Index" asp-controller="student" class="btn btn-primary">Back to List</a>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+﻿@model Student
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Display</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Track</th>
+                <th scope="col">Image</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">@Model.Id</th>
+                <td>@Model.Name</td>
+                <td>@Model.Age</td>
+                <td><img src="/images/@Model.stdImg" width="200px"/></td>
+                <td>
+                    <a asp-action="Index" asp-controller="student" class="btn btn-primary">Back to List</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

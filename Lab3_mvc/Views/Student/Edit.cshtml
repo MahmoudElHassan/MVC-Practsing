@@ -1,0 +1,37 @@
+﻿@model Student
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+    <form class="col w-auto" asp-action="edit" asp-controller="student" enctype="multipart/form-data">
+
+        <div class="col-auto">
+            <input class="form-label" type="text" asp-for="Id" placeholder="ID" />
+        </div>
+        <div class="col-auto">
+            <input class="form-label" type="text" asp-for="Name" placeholder="Name" />
+        </div>
+        <div class="col-auto">
+            <input class="form-label" type="text" asp-for="Age" placeholder="Age" />
+        </div>
+ 
+        <div class="col-auto">
+            <input type="submit" value="Add" class="btn btn-warning">
+        </div> 
+    </form>
+   
+    <a asp-action="Index" asp-controller="student" class="btn btn-primary">Back to List</a>
+ 
+
+</body>
+</html>
